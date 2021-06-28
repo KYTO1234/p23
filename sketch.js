@@ -63,18 +63,8 @@ function setup() {
 
 
 	Engine.run(engine);
-  
-}
-
-
-function draw() {
-  rectMode(CENTER);
-  background(0);
- 
-  packageSprite.x= packageBody.position.x 
-  packageSprite.y= packageBody.position.y 
-
-  if(keyCode === LEFT_ARROW){
+	
+	if(keyCode === LEFT_ARROW){
 	  helicopterSprite.x=helicopterSprite.x -20
 
 	  Matter.Body.translate(packageBody, {x:-20,y:0})
@@ -90,6 +80,19 @@ function draw() {
 Matter.Body.setStatic(packageBody,false);
 
   }
+	
+  
+}
+
+
+function draw() {
+  rectMode(CENTER);
+  background(0);
+ 
+  packageSprite.x= packageBody.position.x 
+  packageSprite.y= packageBody.position.y 
+
+  
 
   drawSprites();
   
